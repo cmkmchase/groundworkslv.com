@@ -33,12 +33,12 @@
     ======================================== */
     :root {
       --bg: #1f1f1f;
-      --bg-soft: #2a2a2a;
-      --bg-card: #252525;
+      --bg-soft: #686868;
+      --bg-card: #686868;
       --text: #ffffff;
       --text-soft: rgba(255, 255, 255, 0.82);
       --text-muted: rgba(255, 255, 255, 0.66);
-      --accent: #d7b126;
+      --accent: #b1cf94;
       --border: rgba(255, 255, 255, 0.12);
       --shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
       --max-width: 1200px;
@@ -527,8 +527,8 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:15555555555">Call Now</a>
-            <a class="btn btn-secondary" href="mailto:you@groundworkslv.com">Email Groundworks</a>
+            <a class="btn btn-primary" href="tel:9134943207">Call Now</a>
+            <a class="btn btn-secondary" href="mailto:caleb@groundworkslv.com">Email Groundworks</a>
           </div>
         </div>
       </div>
@@ -631,17 +631,17 @@
           <div class="contact-list">
             <div class="contact-item">
               <div class="contact-label">Phone</div>
-              <div class="contact-value"><a href="tel:15555555555">(555) 555-5555</a></div>
+              <div class="contact-value"><a href="tel:9134943207">(913) 494-3207</a></div>
             </div>
 
             <div class="contact-item">
               <div class="contact-label">Email</div>
-              <div class="contact-value"><a href="mailto:you@groundworkslv.com">you@groundworkslv.com</a></div>
+              <div class="contact-value"><a href="mailto:caleb@groundworkslv.com">caleb@groundworkslv.com</a></div>
             </div>
 
             <div class="contact-item">
               <div class="contact-label">Service Area</div>
-              <div class="contact-value">Leavenworth County / Kansas City area</div>
+              <div class="contact-value">Leavenworth, Lansing and Leavenworth County</div>
             </div>
 
             <div class="contact-item">
