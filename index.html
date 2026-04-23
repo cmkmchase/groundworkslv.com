@@ -487,6 +487,93 @@
         height: 40px;
       }
     }
+
+    /* ========================================
+    STACKED SERVICES SECTION
+    Alternating wide cards like the mockup
+    ======================================== */
+      .services-stack {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .service-row {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 1.25rem;
+        align-items: stretch;
+        background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .service-row-reverse {
+        grid-template-columns: 1fr 300px;
+      }
+
+      .service-row-reverse .service-media {
+        order: 2;
+      }
+
+      .service-row-reverse .service-content {
+        order: 1;
+      }
+
+      .service-media {
+        min-height: 220px;
+        background: #222222;
+      }
+
+      .service-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .service-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem;
+      }
+
+      .service-content h3 {
+        font-family: 'GroundworksWide', Impact, sans-serif;
+        font-size: clamp(1.5rem, 4vw, 2.4rem);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+      }
+
+      .service-content p {
+        color: var(--text-soft);
+        font-size: 1rem;
+        max-width: 60ch;
+        margin-bottom: 1rem;
+      }
+
+      .service-content .btn {
+        align-self: flex-start;
+      }
+
+@media (max-width: 900px) {
+  .service-row,
+  .service-row-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .service-row-reverse .service-media,
+  .service-row-reverse .service-content {
+    order: initial;
+  }
+
+  .service-media {
+    min-height: 220px;
+  }
+}
   </style>
 </head>
 <body>
@@ -535,31 +622,71 @@
     </section>
 
     <!-- ========================================
-         SERVICES
-         ----------------------------------------
-         Edit these service cards to match exactly what you offer.
+     SERVICES
+     Replace the current 3-card grid with this
     ======================================== -->
     <section id="services" class="section">
       <div class="container">
         <h2 class="section-title">Services</h2>
         <p class="section-copy">
-          Exterior property work for homeowners, rentals, and small commercial properties.
+          Exterior property services for homeowners, rentals, and small commercial properties.
         </p>
 
-        <div class="services-grid">
-          <article class="service-card">
-            <h3>Lawn Care</h3>
-            <p>Routine mowing, string trimming, blow-off, edging, and recurring curb appeal maintenance.</p>
+        <div class="services-stack">
+          <article class="service-row">
+            <div class="service-media">
+              <img src="images/lawn-care.jpg" alt="Freshly cut and edged lawn in front of a home" />
+            </div>
+
+            <div class="service-content">
+              <h3>Lawn Care</h3>
+              <p>
+                Routine mowing, string trimming, edging, blow-off, and recurring curb appeal maintenance.
+              </p>
+              <a class="btn btn-secondary" href="quote.html">Request Quote</a>
+            </div>
           </article>
 
-          <article class="service-card">
-            <h3>Cleanup</h3>
-            <p>Brush removal, debris haul-off, seasonal cleanup, overgrowth reduction, and neglected property reset work.</p>
+          <article class="service-row service-row-reverse">
+            <div class="service-media">
+              <img src="images/cleanup.jpg" alt="Yard cleanup with debris removed and property cleared" />
+            </div>
+
+            <div class="service-content">
+              <h3>Clean Up</h3>
+              <p>
+                Brush removal, storm debris haul-off, seasonal cleanup, overgrowth reduction, and neglected property reset work.
+              </p>
+              <a class="btn btn-secondary" href="quote.html">Request Quote</a>
+            </div>
           </article>
 
-          <article class="service-card">
-            <h3>Property Work</h3>
-            <p>Pruning, small exterior projects, shed removal, sidewalk reclamation, and general outdoor improvement work.</p>
+          <article class="service-row">
+            <div class="service-media">
+              <img src="images/tree-trimming.jpg" alt="Tree limbs being trimmed back from a yard" />
+            </div>
+
+            <div class="service-content">
+              <h3>Tree Trimming</h3>
+              <p>
+                Small tree and limb trimming, branch reduction, storm cleanup, and general exterior vegetation control.
+              </p>
+              <a class="btn btn-secondary" href="quote.html">Request Quote</a>
+            </div>
+          </article>
+
+          <article class="service-row service-row-reverse">
+            <div class="service-media">
+              <img src="images/restoration.jpg" alt="Overgrown exterior area restored and cleaned up" />
+            </div>
+
+            <div class="service-content">
+              <h3>Restoration</h3>
+              <p>
+                Sidewalk reclamation, overgrowth cutback, neglected area cleanup, and exterior reset work that brings a property back into shape.
+              </p>
+              <a class="btn btn-secondary" href="quote.html">Request Quote</a>
+            </div>
           </article>
         </div>
       </div>
