@@ -210,6 +210,22 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ========================================
+    PHONE / EMAIL TWO COLUMN ROW
+    ======================================== */
+    .contact-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    /* Stack on mobile */
+    @media (max-width: 600px) {
+    .contact-row {
+      grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -275,21 +291,56 @@
         </div>
 
         <!-- ========================================
-             CONTACT INFO
-        ======================================== -->
-        <div class="form-group">
-          <label for="contact">
-            Phone or Email
-          </label>
+     NAME
+======================================== -->
+<div class="form-group">
+  <label for="name">
+    Your Name (What should we call you?)
+  </label>
 
-          <input
-            id="contact"
-            name="contact"
-            type="text"
-            placeholder="Phone number or email"
-            required
-          />
-        </div>
+  <input
+    id="name"
+    name="name"
+    type="text"
+    placeholder="Your name"
+    required
+  />
+</div>
+
+<!-- ========================================
+     CONTACT ROW
+======================================== -->
+<div class="contact-row">
+
+  <!-- Phone -->
+  <div class="form-group">
+    <label for="phone">
+      Phone
+    </label>
+
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      placeholder="Phone number"
+    />
+  </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">
+        Email
+        </label>
+
+        <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Email address"
+        />
+      </div>
+
+    </div>
 
         <!-- ========================================
              OPTIONAL MESSAGE
