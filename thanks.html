@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quote Received | Groundworks</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <style>
+    /* ========================================
+       FONTS
+    ======================================== */
+    @font-face {
+      font-family: 'GroundworksDisplay';
+      src: url('./fonts/HitandRun-Regular.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'GroundworksWide';
+      src: url('./fonts/PlacardNextWideRg.ttf') format('truetype');
+    }
+
+    /* ========================================
+       BRAND VARIABLES
+    ======================================== */
+    :root {
+      --bg: #1f1f1f;
+      --text: #ffffff;
+      --text-soft: rgba(255,255,255,0.8);
+      --accent: #f5d694;
+      --border: rgba(255,255,255,0.12);
+      --radius: 24px;
+      --max-width: 760px;
+    }
+
+    /* ========================================
+       RESET
+    ======================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 2rem;
+
+      background: var(--bg);
+      color: var(--text);
+
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ========================================
+       CARD
+    ======================================== */
+    .thanks-card {
+      width: min(100%, var(--max-width));
+
+      padding: 3rem 2rem;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,0.04),
+          rgba(255,255,255,0.02)
+        );
+    }
+
+    /* ========================================
+       TITLE
+    ======================================== */
+    .title {
+      font-family: 'GroundworksDisplay', Impact, sans-serif;
+
+      font-size: clamp(3rem, 10vw, 6rem);
+      line-height: 0.9;
+
+      text-transform: uppercase;
+      color: var(--accent);
+
+      margin-bottom: 1rem;
+    }
+
+    /* ========================================
+       COPY
+    ======================================== */
+    .copy {
+      max-width: 40ch;
+
+      margin: 0 auto 2rem;
+
+      color: var(--text-soft);
+      font-size: 1.05rem;
+    }
+
+    /* ========================================
+       BUTTON
+    ======================================== */
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 54px;
+      padding: 0.9rem 1.6rem;
+
+      border-radius: 999px;
+
+      background: var(--accent);
+      color: #111111;
+
+      font-weight: 700;
+      letter-spacing: 0.03em;
+
+      transition: 0.2s ease;
+    }
+
+    .home-btn:hover {
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="thanks-card">
+
+    <!-- Main heading -->
+    <h1 class="title">
+      Quote Received
+    </h1>
+
+    <!-- Supporting text -->
+    <p class="copy">
+      Groundworks received the quote request and will reach back out soon.
+    </p>
+
+    <!-- Return home button -->
+    <a class="home-btn" href="/">
+      Return Home
+    </a>
+
+  </main>
+
+</body>
+</html>
