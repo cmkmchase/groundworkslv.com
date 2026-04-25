@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Groundworks | Clean Up</title>
+
+  <style>
+    /* ========================================
+       FONT SETUP
+    ======================================== */
+    @font-face {
+      font-family: 'GroundworksDisplay';
+      src: url('./fonts/HitandRun-Regular.otf') format('opentype');
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GroundworksWide';
+      src: url('./fonts/PlacardNextWideRg.ttf') format('truetype');
+      font-display: swap;
+    }
+
+    /* ========================================
+       BRAND VARIABLES
+    ======================================== */
+    :root {
+      --bg: #1f1f1f;
+      --bg-card: #2a2a2a;
+      --text: #ffffff;
+      --text-soft: rgba(255,255,255,0.82);
+      --accent: #b1cf94;
+      --border: rgba(255,255,255,0.12);
+      --max-width: 1200px;
+      --radius: 22px;
+    }
+
+    /* ========================================
+       BASE STYLES
+    ======================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* ========================================
+       HEADER
+    ======================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(31,31,31,0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-shell {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 0.95;
+    }
+
+    .brand-main {
+      font-family: 'GroundworksDisplay', Impact, sans-serif;
+      font-size: 2.5rem;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-family: 'GroundworksWide', Impact, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ========================================
+       PAGE HERO
+    ======================================== */
+    .page-hero {
+      padding: 6rem 0 3rem;
+    }
+
+    .page-title {
+      font-family: 'GroundworksDisplay', Impact, sans-serif;
+      font-size: clamp(3rem, 7vw, 5rem);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .page-copy {
+      max-width: 760px;
+      color: var(--text-soft);
+      font-size: 1.05rem;
+    }
+
+    /* ========================================
+       GALLERY GRID
+    ======================================== */
+    .gallery-section {
+      padding-bottom: 5rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .gallery-caption {
+      padding: 1rem;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+    }
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-shell {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+      }
+
+      .page-hero {
+        padding-top: 4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================
+       HEADER
+       Reused from main site
+  ======================================== -->
+  <header class="site-header">
+    <div class="container nav-shell">
+
+      <!-- Links back to homepage -->
+      <a href="index.html" class="brand">
+        <span class="brand-main">Groundworks</span>
+        <span class="brand-sub">Exterior Property Services</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========================================
+         PAGE INTRO
+    ======================================== -->
+    <section class="page-hero">
+      <div class="container">
+
+        <h1 class="page-title">Clean Up</h1>
+
+        <p class="page-copy">
+          Reliable recurring lawn maintenance focused on consistency, clean lines, trimmed edges, and a finished appearance. Groundworks handles mowing, string trimming, edging, blow-off, and general curb appeal upkeep for residential and small commercial properties.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         IMAGE GALLERY
+         Duplicate gallery-item blocks as needed
+    ======================================== -->
+    <section class="gallery-section">
+      <div class="container">
+
+        <div class="gallery-grid">
+
+          <article class="gallery-item">
+            <img src="images/lawn-1.jpg" alt="Freshly cut lawn" />
+
+            <div class="gallery-caption">
+              Weekly maintenance cut with trimmed edges and full cleanup.
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <img src="images/lawn-2.jpg" alt="Edged sidewalk and trimmed lawn" />
+
+            <div class="gallery-caption">
+              Sidewalk edging and curb cleanup for sharper property lines.
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <img src="images/lawn-3.jpg" alt="Large residential lawn service" />
+
+            <div class="gallery-caption">
+              Recurring lawn maintenance for larger residential properties.
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <img src="images/lawn-4.jpg" alt="Backyard lawn maintenance" />
+
+            <div class="gallery-caption">
+              Backyard cleanup and mowing after overgrowth buildup.
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <img src="images/lawn-5.jpg" alt="Grass trimming around fence" />
+
+            <div class="gallery-caption">
+              Fence line trimming and detail finishing work.
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <img src="images/lawn-6.jpg" alt="Fresh striped lawn" />
+
+            <div class="gallery-caption">
+              Clean finished appearance after service completion.
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
