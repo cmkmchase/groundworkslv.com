@@ -310,7 +310,13 @@
       width: fit-content;
     }
 
-
+    /*Keeps buttons side-by-side*/
+    .service-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.25rem;
+    }
 
 
 
@@ -666,8 +672,15 @@
               <p>
                 Routine mowing, string trimming, edging, blow-off, and recurring curb appeal maintenance.
               </p>
-              <a class="btn btn-secondary" href="quote.html">Request Quote</a>
-              <a class="btn btn-secondary" href="lawn-care.html">See More</a>
+            <div class="service-actions">
+              <a class="btn btn-primary" href="quote.html">
+                Request Quote
+              </a>
+
+              <a class="btn btn-secondary" href="lawn-care.html">
+                See More
+              </a>
+            </div>
             </div>
           </article>
 
