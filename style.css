@@ -881,3 +881,16 @@ a {
   }
 }
  
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  min-height: 1.2em;
+}
+
+.form-status-success {
+  color: var(--accent, #b1cf94);
+}
+
+.form-status-error {
+  color: #e08a8a;
+}
